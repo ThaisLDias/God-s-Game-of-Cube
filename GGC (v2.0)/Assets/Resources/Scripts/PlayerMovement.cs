@@ -274,6 +274,17 @@ public class PlayerMovement : MonoBehaviour {
 			if (this.transform.position.y < -15.0f) {
 				this.transform.position = mainPos;
 			}
+			#region Pause
+			if(Input.GetKeyDown(KeyCode.P)&& Application.loadedLevel <= 6 && Application.loadedLevel >= 3)
+			{
+				if(Time.timeScale != 0)
+				{
+					Time.timeScale = 0;
+				}else{
+					Time.timeScale = 1;
+				}
+			}
+			#endregion
 	}
 
 	void OnTriggerEnter(Collider col) {
