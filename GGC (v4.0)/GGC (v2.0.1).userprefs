@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Resources\Scripts\PlayerMovement.cs">
+    <Files>
+      <File FileName="Assets\Resources\Scripts\GoalDoor.cs" Line="27" Column="1" />
+      <File FileName="Assets\Resources\Scripts\OnGuiScript.cs" Line="60" Column="40" />
+      <File FileName="Assets\Resources\Scripts\Music.cs" Line="22" Column="14" />
+      <File FileName="Assets\Resources\Scripts\PlayerMovement.cs" Line="111" Column="5" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
