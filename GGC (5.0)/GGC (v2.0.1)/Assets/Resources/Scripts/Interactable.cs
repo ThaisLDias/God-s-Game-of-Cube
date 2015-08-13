@@ -7,9 +7,9 @@ public class Interactable : MonoBehaviour
 
 	void Start () 
 	{
-		if(PlayerPrefs.GetInt("level") < 1)
+		if(PlayerPrefs.GetInt("level") < 3)
 		{
-			PlayerPrefs.SetInt("level",1);
+			PlayerPrefs.SetInt("level",3);
 		}
 
 		string level = gameObject.transform.name;
