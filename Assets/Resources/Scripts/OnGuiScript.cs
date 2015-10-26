@@ -10,6 +10,7 @@ public class OnGuiScript : MonoBehaviour {
     private int localCounter = 0;
 	private Vector3 ScreenSize;
 	public GUIStyle Style;
+	public static OnGuiScript instance; 
 
 	public Texture2D textureM;
 	public Texture2D textureBack;
@@ -17,6 +18,8 @@ public class OnGuiScript : MonoBehaviour {
 	public Texture2D textureExit;
     void Start()
     {
+		instance = this;
+		DontDestroyOnLoad(this.gameObject);
         movements = 0;
         spawns = 0;
 		ScreenSize.x = 100;
@@ -39,7 +42,6 @@ public class OnGuiScript : MonoBehaviour {
 			PlayerPrefs.SetInt("cubes",spawns);
 		}
         currentAverage = (movements + spawns) / 2;
-		Debug.Log (currentAverage);
         PlayerPrefs.SetInt("currentAverage", currentAverage);
         PlayerPrefs.SetInt("currentTime", currentTime);
         

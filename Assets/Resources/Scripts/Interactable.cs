@@ -19,6 +19,6 @@ public class Interactable : MonoBehaviour
 		{
 			gameObject.GetComponent<Button>().interactable = false;	
 		}
-		Debug.Log(PlayerPrefs.GetInt("level"));
+		//Debug.Log(PlayerPrefs.GetInt("level"));
 	}
 }

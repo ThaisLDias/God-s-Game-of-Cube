@@ -33,5 +33,4 @@ public class Fading : MonoBehaviour {
 		FadeBegin (-1);
 
 	}
-
 } 

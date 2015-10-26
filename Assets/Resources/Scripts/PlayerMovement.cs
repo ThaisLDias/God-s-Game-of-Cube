@@ -78,7 +78,10 @@ public class PlayerMovement: MonoBehaviour {
 		moveDirArray[1] = "a";
 		moveDirArray[2] = "s";
 		moveDirArray[3] = "d";
-		countMovement = GameObject.Find("GuiManager").GetComponent < OnGuiScript > ().movements;
+		if(GameObject.Find("GuiManager"))
+		{
+			countMovement = GameObject.Find("GuiManager").GetComponent <OnGuiScript> ().movements;
+		}
 	}
 	
 	void Climb() {
@@ -98,7 +101,7 @@ public class PlayerMovement: MonoBehaviour {
 		countMenu++;
 
 #region Game scenes
-		if (Application.loadedLevel >= 3 && Application.loadedLevel <= 6) {
+		if (Application.loadedLevel >= 3 && Application.loadedLevel <= 8) {
 			
 			if ((Input.GetKey(KeyCode.A)) && ismoving == false && !GroundCheck.isFloating && !won) {
 				invertPosX = 0f;
@@ -182,7 +185,7 @@ public class PlayerMovement: MonoBehaviour {
 		}
 #endregion
 #region Menu scenes
-		if ((Application.loadedLevel <= 2 || Application.loadedLevel == 7) && countMenu >= 50) {
+		if ((Application.loadedLevel <= 2 || Application.loadedLevel == 9) && countMenu >= 50) {
 			switch (moveDirArray[control]) {
 			case "w":
 				control += 1;
@@ -248,14 +251,16 @@ public class PlayerMovement: MonoBehaviour {
 		
 		if (this.transform.position.y < -15.0f) {
 			this.transform.position = mainPos;
-		}#region Pause
+		}
+		#region Pause
 		if (Input.GetKeyDown(KeyCode.P) && Application.loadedLevel <= 6 && Application.loadedLevel >= 3) {
 			if (Time.timeScale != 0) {
 				Time.timeScale = 0;
 			} else {
 				Time.timeScale = 1;
 			}
-		}#endregion
+		}
+		#endregion
 	}
 	
 	void OnTriggerEnter(Collider col) {

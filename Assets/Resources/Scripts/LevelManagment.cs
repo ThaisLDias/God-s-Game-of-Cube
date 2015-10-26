@@ -7,6 +7,7 @@ public class LevelManagment : MonoBehaviour {
 
 	void Awake() {
 		DontDestroyOnLoad (this.gameObject);
+		PlayerPrefs.DeleteAll();
 	}
 
 	public void levelManager (string level) {
